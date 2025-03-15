@@ -7,7 +7,7 @@ import torch.nn as nn
 
 # create transformations for the images
 
-val_dataset = ImageDataset('data/val', transform=transform)
+val_dataset = ImageDataset('data/test', transform=transform)
 val_loader = torch.utils.data.DataLoader(val_dataset, batch_size=32, shuffle=False, num_workers=4)
 
 model = torch.load("model/model_final.pth", weights_only=False)

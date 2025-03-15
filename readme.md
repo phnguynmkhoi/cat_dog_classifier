@@ -25,19 +25,23 @@ cd cat_dog_classifier
 ```bash
 bash script/download_dataset.sh
 ```
-3. Fine-tune Resnet18:
+3. Prepare dataset for fine-tuning:
+```
+python ai/data_preparation.py
+```
+4. Fine-tune Resnet18:
 ```bash
 python ai/training.py
 ```
-4. Run the evaluation test (Optional):
+5. Run the evaluation test (Optional):
 ```bash
 python ai/evaluation.py
 ```
-5. Run the backend server:
+6. Run the backend server:
 ```bash
 python backend/app.py
 ```
-6. Run the frontend server:
+7. Run the frontend server:
 ```bash
 streamlit run frontend/app.py
 ```
